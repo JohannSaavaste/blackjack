@@ -2,10 +2,12 @@ public class Kaart {
 
     private int väärtus;
     private final String kirjeldus;
+    private final String mast;
 
-    public Kaart(int väärtus, String kirjeldus) {
+    public Kaart(int väärtus, String kirjeldus, String mast) {
         this.väärtus = väärtus;
         this.kirjeldus = kirjeldus;
+        this.mast = mast;
     }
 
     public String getKirjeldus() {
@@ -15,6 +17,10 @@ public class Kaart {
     public int getVäärtus() {
         return väärtus;
     }
+    
+    public String getMast(){
+        return mast; 
+    }
 
     public void setVäärtus(int väärtus) {
         this.väärtus = väärtus;
@@ -22,7 +28,7 @@ public class Kaart {
 
     @Override
     public String toString() {
-        return "Kaart Kirjeldus: " + kirjeldus + ", Väärtus: " + väärtus;
+        return mast + kirjeldus;
     }
 
 }
